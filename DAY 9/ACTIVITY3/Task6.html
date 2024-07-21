@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+<body id="bdy">
+    <p id="prgh">My name is Prakhar</p>
+    <div id="divEle">I'm 22 years old</div>
+    <ul id="undrLst">
+        <li>Prakhar</li>
+        <li>Prerna</li>
+        <li>Vidya</li>
+        <li>Ramesh</li>
+    </ul>
+</body>
+<script>
+    let undrEle=document.getElementById("undrLst");
+    let lstChd= undrEle.lastElementChild;
+    undrEle.removeChild(lstChd);
+</script>
+</html>

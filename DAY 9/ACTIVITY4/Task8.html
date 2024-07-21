@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            color: red;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="myElement">Hello, I'm Prakhar</div>
+</body>
+<script>
+    let divEle=document.getElementById("myElement");
+    divEle.classList.add("highlight");
+    setTimeout(()=>{
+        divEle.classList.remove("highlight");
+    },2000)
+</script>
+</html>
