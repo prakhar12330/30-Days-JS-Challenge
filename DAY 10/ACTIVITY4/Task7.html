@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 8px 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form  id="frm" action="/submit" method="post">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" required>
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script>
+    let myFrm=document.querySelector("#frm");
+    myFrm.addEventListener("submit",(event)=>{
+       event.preventDefault();
+       const data= Object.fromEntries(new FormData(event.target).entries());
+       console.log(data);
+    })
+
+</script>
+</html>

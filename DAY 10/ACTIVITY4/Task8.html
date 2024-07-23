@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+</head>
+<body>
+    <select name="Languages" id="PL">
+        <option value="CPP">CPP</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="Javascript">Javascript</option>
+    </select>
+    <p id="prgph"></p>
+    
+</body>
+<script>
+    let drpDwn=document.getElementById("PL");
+    drpDwn.addEventListener("change",()=>{
+       let val=drpDwn.value;
+       document.getElementById("prgph").textContent= val;
+    })
+</script>
+</html>

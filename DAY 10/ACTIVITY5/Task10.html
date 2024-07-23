@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+</head>
+<body>
+    <ul id="undrLst">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <button id="addItemBtn">Add Item</button>
+</body>
+ <script>
+   let List=document.getElementById("undrLst");
+    List.addEventListener("click",(event)=>{
+        if(event.target && event.target.nodeName==="LI"){
+            console.log(event.target.textContent);
+        }
+    })
+
+    let Btn=document.getElementById("addItemBtn");
+    Btn.addEventListener("click",(event)=>{
+         const newEle=document.createElement("li");
+         newEle.textContent="Green Tea";
+         List.appendChild(newEle);
+    })
+ </script>
+</html>
